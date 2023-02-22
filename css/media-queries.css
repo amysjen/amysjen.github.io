@@ -1,0 +1,62 @@
+@media screen and (max-width: 1024px) {
+	header {
+		height: auto;
+	}
+	#about .bio, #skills .content {
+		width: auto;
+		padding: 0 3%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.logo {
+		width: 150px;
+	}
+	header .content {
+		width: 280px;
+		margin: 5% auto;
+		padding: 60px 10px;
+	}
+	.occupation {
+		font-size: 21px;
+	}
+	.arrow {
+		display: none;
+	}
+	#spotlight {
+		margin-bottom: 30px;
+	}
+	#spotlight .skill {
+		display: block;
+		width: auto;
+		margin: 25px 0;
+	}
+	#skills {
+		padding: 15px 0;
+	}
+	#skills:after {
+		width: 80%;
+		bottom: 0;
+	}
+	#skills li {
+		font-size: 15px;
+		padding: 10px;
+	}
+	#portfolio {
+		height: 350px;
+	}
+	#portfolio .info .title {
+		font-size: 20px;
+	}
+	#portfolio .carousel-control {
+		left: 0;
+		right: auto;
+	}
+	#portfolio .carousel-control.right {
+		right: 0;
+		left: auto;
+	}
+	#contact .content {
+		width: auto;
+	}
+}
