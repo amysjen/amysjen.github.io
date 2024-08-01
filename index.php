@@ -41,7 +41,7 @@
 			<li>HTML5</li>
 			<li>CSS3</li>
 			<li>Javascript</li>
-			<li>jQuery</li>
+			<li>PHP</li>
 		</ul>
 	</div>
 </div>
