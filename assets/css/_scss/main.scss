@@ -79,7 +79,7 @@ body {
     text-align: center;
 
     .logo {
-        width: 350px;
+        width: 200px;
         max-width: 90%;
     }
 
@@ -88,10 +88,12 @@ body {
         font-size: 2em;
         font-family: $font-header;
         span {
+            color: $themeColor;
             font-weight: 700;
         }
     }
 }
+
 
 #videoClip {
     width: 900px;
@@ -99,7 +101,7 @@ body {
 
     .video {
         max-width: 120%;
-        width: 1000px;
+        width: 900px;
         margin: auto;
     }
 }
