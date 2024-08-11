@@ -72,6 +72,11 @@ body {
     background: #000;
 }
 
+.header {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+}
 
 @keyframes rotate {
   0% {
@@ -121,6 +126,7 @@ body {
         color: #fff;
         font-size: 2em;
         font-family: $font-header;
+        text-shadow: 0 2px 4px rgba(#000,0.8);
         span {
             color: $themeColor;
             font-weight: 700;
@@ -158,5 +164,21 @@ body {
         max-width: 120%;
         width: 900px;
         margin: auto;
+    }
+}
+
+#about {
+    position: relative;
+    max-width: $contentWidth;
+    margin: 0 auto;
+    padding: 2em;
+
+    h2 {
+        font-size: 2em;
+        font-family: $font-header;
+        font-weight: 700;
+        color: $themeColor;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
     }
 }
