@@ -69,11 +69,44 @@ body {
     display: block;
     width: auto;
     height: 100%;
+    background: #000;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%,-50%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(360deg) scale(1.5);
+  }
+}
+
+.gradient {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    --size: 600px;
+    --speed: 50s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+    width: 400px;
+    height: 400px;
+    max-width: 90%;
+    filter: blur(calc(var(--size) / 5));
+    background: linear-gradient(rgba(#9571ab, 100%), $themeColor);
+    animation: rotate 10s ease alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
 #topHeader {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     margin: 2em auto;
-    position: relative;
     max-width: 90%;
     width: 600px;
     text-align: center;
@@ -85,6 +118,7 @@ body {
 
     .titles {
         margin: 2em auto;
+        color: #fff;
         font-size: 2em;
         font-family: $font-header;
         span {
@@ -96,8 +130,29 @@ body {
 
 
 #videoClip {
-    width: 900px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%,-50%);
+    width: 1100px;
     margin: 0 auto;
+
+    foreignObject {
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: rgba(#000,0.35);
+        }
+    }
 
     .video {
         max-width: 120%;
