@@ -76,6 +76,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 90vh;
+    overflow: hidden;
 }
 
 @keyframes rotate {
@@ -90,9 +91,9 @@ body {
 .gradient {
     position: absolute;
     z-index: 1;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    --size: 600px;
+    --size: 500px;
     --speed: 50s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
@@ -180,5 +181,16 @@ body {
         color: $themeColor;
         margin-bottom: 20px;
         letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    #videoClip {
+        width: 800px;
+    }
+
+    .gradient {
+        --size: 300px;
     }
 }
