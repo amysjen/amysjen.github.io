@@ -63,13 +63,62 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-family: $font-body;
     color: $textColor;
     display: block;
     width: auto;
     height: 100%;
+    line-height: 1.5;
     background: #000;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: $font-header;
+    font-weight: 700;
+    color: $themeColor;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-family: $font-header;
+    font-weight: 700;
+    color: $accentColor;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 1em 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 1em;
+    background-color: $accentColor;
+    margin-top: 1em;
+    font-family: $font-header;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+
+    &:hover {
+        color: #fff;
+        background-color: #45b995;
+    }
 }
 
 .header {
@@ -135,7 +184,6 @@ body {
     }
 }
 
-
 #videoClip {
     position: absolute;
     z-index: 1;
@@ -173,14 +221,64 @@ body {
     max-width: $contentWidth;
     margin: 0 auto;
     padding: 2em;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    .img {
+        position: relative;
+        flex: 0 0 150px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 1em;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+#projects {
+    position: relative;
+    max-width: $contentWidth;
+    margin: 0 auto;
+    padding: 2em;
 
     h2 {
-        font-size: 2em;
-        font-family: $font-header;
-        font-weight: 700;
-        color: $themeColor;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
+        border-bottom: 1px solid $themeColor;
+    }
+
+    .project {
+        display: flex;
+        gap: 2em;
+        margin: 2em auto;
+        align-items: center;
+
+        &:nth-child(even) {
+            .projectPreview {
+                order: 2;
+            }
+            .projectDetail {
+                order: 1;
+            }
+        }
+    }
+
+    .projectPreview {
+        flex: 0 0 50%;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .projectDetail {
+        flex-grow: 1;
     }
 }
 
@@ -192,5 +290,20 @@ body {
 
     .gradient {
         --size: 300px;
+    }
+
+    #about {
+        flex-direction: column;
+        gap: 10px;
+
+        .img {
+            flex: 0 0 100%;
+        }
+    }
+
+    #projects {
+        .project {
+            display: block;
+        }
     }
 }
