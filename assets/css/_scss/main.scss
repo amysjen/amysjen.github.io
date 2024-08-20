@@ -269,10 +269,17 @@ strong {
     }
 
     .project {
+        opacity: 0;
         display: flex;
         gap: 2em;
-        margin: 2em auto;
+        margin: 3em auto;
         align-items: center;
+        transition: opacity 1s;
+        transition-delay: 1s;
+
+        &.show {
+            opacity: 1;
+        }
 
         &:nth-child(even) {
             .projectPreview {
