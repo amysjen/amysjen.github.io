@@ -51,7 +51,7 @@ a, visited {
     text-decoration: none;
     transition: all 0.2s;
     &:hover {
-        color: #8F8DC3;
+        color: $hoverColor;
     }
 }
 html {
@@ -59,6 +59,19 @@ html {
     height: 100%;
     overflow-y: scroll;
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 body {
     position: relative;
     margin: 0;
@@ -70,7 +83,9 @@ body {
     width: auto;
     height: 100%;
     line-height: 1.5;
-    background: #000;
+    background: linear-gradient(45deg, #235775, #0D1B1E, #000, #23715c);
+    background-size: 450% 450%;
+    animation: gradient 15s ease infinite;
 }
 
 h2 {
@@ -116,8 +131,8 @@ strong {
     letter-spacing: 1px;
 
     &:hover {
-        color: #fff;
-        background-color: #45b995;
+        color: #000;
+        background-color: $hoverColor;
     }
 }
 
@@ -150,7 +165,7 @@ strong {
     height: 400px;
     max-width: 90%;
     filter: blur(calc(var(--size) / 5));
-    background: linear-gradient(rgba(#9571ab, 100%), $themeColor);
+    background: linear-gradient(rgba(#9571ab, 100%), $decorColor);
     animation: rotate 10s ease alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
