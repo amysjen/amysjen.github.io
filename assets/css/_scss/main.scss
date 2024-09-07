@@ -78,6 +78,7 @@ body {
     padding: 0;
     font-size: 18px;
     font-family: $font-body;
+    font-weight: 600;
     color: $textColor;
     display: block;
     width: auto;
@@ -110,11 +111,23 @@ h3 {
 
 p {
     margin: 1em 0;
+    background: radial-gradient(
+    rgba(119, 152, 171, 1),
+    rgba(242, 206, 230, 1)   /* HSL(200 100% 60%) converted */
+    ) fixed;
+    background: conic-gradient(
+    rgba(119, 152, 171, 1),
+    rgba(242, 206, 230, 1),  /* HSL(200 100% 60%) converted */
+    rgba(119, 152, 171, 1) 
+    ) fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 
 strong {
     color: $decorColor;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .btn {
@@ -240,6 +253,7 @@ strong {
     display: flex;
     align-items: flex-start;
     gap: 40px;
+    box-sizing: border-box;
 
     .img {
         position: relative;
@@ -256,6 +270,21 @@ strong {
             height: 100%;
         }
     }
+
+    .text h2, .text p {
+        background: radial-gradient(
+        rgba(119, 152, 171, 1),
+        rgba(242, 206, 230, 1)   /* HSL(200 100% 60%) converted */
+        ) fixed;
+        background: conic-gradient(
+        rgba(119, 152, 171, 1),
+        rgba(242, 206, 230, 1),  /* HSL(200 100% 60%) converted */
+        rgba(119, 152, 171, 1) 
+        ) fixed;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
 }
 
 #projects {
