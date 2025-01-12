@@ -287,6 +287,26 @@ strong {
 
 }
 
+#skills {
+    position: relative;
+    max-width: $contentWidth;
+    margin: 0 auto;
+    padding: 1em 2em;
+    text-align: center;
+
+    .icon {
+        font-size: 2.5em;
+        transition: all 0.3s;
+        display: inline-block;
+        margin: 5px;
+        color: #fff;
+
+        &:hover {
+            color: $decorColor;
+        }
+    }
+}
+
 #projects {
     position: relative;
     max-width: $contentWidth;
