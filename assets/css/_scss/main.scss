@@ -357,6 +357,16 @@ strong {
 .footer {
     padding: 2em 0;
 
+    .contact {
+        text-align: center;
+        font-size: 1.3em;
+        margin-bottom: 1.5em;
+        .link {
+            color: $decorColor;
+            text-decoration: underline;
+        }
+    }
+
     .socials {
         display: flex;
         justify-content: center;
