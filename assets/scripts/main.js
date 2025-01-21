@@ -15,4 +15,27 @@ $(document).ready(function() {
         var viewportBottom = viewportTop + $(window).height();
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
+
+
+
+  const $cursor = $(".cursor");
+
+  $(document).on("mousemove", function (e) {
+    $cursor.css({
+      top: `${e.pageY - 25}px`,
+      left: `${e.pageX - 25}px`,
+    });
+  });
+
+  $(document).on("click", function () {
+
+    $cursor.addClass("cursor--expand");
+
+    setTimeout(function () {
+      $cursor.removeClass("cursor--expand");
+    }, 500);
+  });
+
+
 });
+
