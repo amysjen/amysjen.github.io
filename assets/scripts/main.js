@@ -22,8 +22,8 @@ $(document).ready(function() {
 
   $(document).on("mousemove", function (e) {
     $cursor.css({
-      top: `${e.pageY - 25}px`,
-      left: `${e.pageX - 25}px`,
+      top: `${e.pageY - 10}px`,
+      left: `${e.pageX - 10}px`,
     });
   });
 

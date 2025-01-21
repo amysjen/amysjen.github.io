@@ -91,9 +91,9 @@ body {
 
 
 .cursor {
-   width: 20px;
-   height: 20px;
-   border: 10px solid rgba($themeColor, .8);
+   width: 10px;
+   height: 10px;
+   border: 2px solid rgba($themeColor, .8);
    border-radius: 50%;
    position: absolute;
    z-index: 1000;
@@ -103,24 +103,22 @@ body {
    animation: cursor-animate 550ms infinite alternate;
     &::after {
        content: "";
-       width: 40px;
-       height: 40px;
-       border: 15px solid rgba($themeColor, .2);
+       width: 20px;
+       height: 20px;
+       border: 10px solid rgba($themeColor, .2);
        border-radius: 50%;
        position: absolute;
-       top: -25px;
-       left: -25px;
+       top: -15px;
+       left: -15px;
        animation: cursor-animate-2 550ms infinite alternate;
     }
-
-    /*Modificador*/
     &--expand {
        animation: cursor-animate-3 550ms forwards;
-       border: 10px solid $decorColor;
+       border: 5px solid $decorColor;
     }
 
     &--expand::after {
-       border: 15px solid rgba($decorColor, .3);
+       border: 10px solid rgba($decorColor, .3);
     }
 }
 
